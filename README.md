@@ -15,7 +15,7 @@ The tests prove the mechanics with a deterministic mock base. The repair loop li
 
 ## The two organs
 
-Instruction-following repair. Generate, run the same machine-verifiable checker the score uses, and on a violation re-prompt with the specific violation, up to a few times. Measured on a weak base, one-shot 76.9% to 97.4% with repair. To reproduce against a real base with headroom:
+Instruction-following repair. Generate, run the same machine-verifiable checker the score uses, and on a violation re-prompt with the specific violation, up to a few times. This is verify-and-repair, that is, rejection sampling against the same deterministic checker the score uses, so a gain is expected by construction. The value is reliability and cost, not emergence, and it covers only machine-checkable format constraints. In one exploratory, in-sample run on Claude Haiku 4.5 over 39 self-authored IFEval-style format constraints, one-shot 76.9% rose to 97.4% with verify-and-repair (+20.5pp; paired bootstrap 95% CI excludes zero, n=39). To reproduce against a real base with headroom:
 
 ```
 BASE_MODEL="anthropic:claude-haiku-4-5" ANTHROPIC_API_KEY=sk-... npm run bench:instruction-following
@@ -27,7 +27,7 @@ or point at any OpenAI-compatible endpoint, hosted or local:
 BASE_MODEL="openai-compat:<model>" OPENAI_BASE_URL=http://127.0.0.1:PORT/v1 npm run bench:instruction-following
 ```
 
-Durable learning across sessions. A lesson learned once is stored and recalled in a later, cold session, which a prompt cannot do. The demonstration bench uses a scripted base, so the effect of recalled memory is isolated from the strength of the base:
+Durable learning across sessions. A lesson learned once is stored and recalled in a later, cold session, which a prompt cannot do. This is a single-task existence proof, not a general mechanism: one substitution-cipher task, one stored rule, 20 items, cold 0% to warm 100% in one exploratory run. The demonstration bench uses a scripted base, so the effect of recalled memory is isolated from the strength of the base:
 
 ```
 npm run bench:durable-learning
@@ -46,7 +46,7 @@ Run it twice: the store persists to disk, so the second run loads the lesson bef
 
 ## Scope
 
-This kit ships the two organs whose gains survived scrutiny. Three further studies from the same program are deferred to a later release: a self-consistency bench, a retrieval bench, and a contamination control for an associative-reasoning claim that did not survive its own review. The associative-reasoning study depends on a stimulus set with published norms that is not redistributable here, so it will ship with an author-generated substitute. The headline numbers come from a real base with headroom, not from the mock. The mock exists so the mechanics run anywhere.
+This kit ships the two organs whose gains survived scrutiny. Three further studies from the same program are deferred to a later release: a self-consistency bench, a retrieval bench, and a contamination control for an associative-reasoning claim that did not survive its own review. The associative-reasoning study depends on a stimulus set with published norms that is not redistributable here, so it will ship with an author-generated substitute. The instruction-following headline comes from a real base with headroom, not from the mock, and is a single exploratory, in-sample run; the durable-learning result is a single-task existence proof on a scripted base. The repo is a way to reproduce both, not independent evidence that either generalizes. The mock exists so the mechanics run anywhere.
 
 ## License
 
