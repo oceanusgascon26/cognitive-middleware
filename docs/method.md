@@ -1,0 +1,11 @@
+# Why most "it is smarter now" claims can't be measured
+
+Most claims that a wrapper makes a base model smarter can't be measured. An organ shows a gain only where the base fails. On a task the base already passes, the gain isn't small. Nothing measurable is left. There's no room for the organ to add anything, so the measured delta is zero however good the organ is.
+
+To measure what an organ adds, the evaluation set has to contain a subset the base actually fails. If the base sits near the ceiling on every item, the result says nothing about the organ. It says the base was already good enough on that set. A saturated base and a useless organ produce the same number, which is how the two get confused.
+
+So the kit is built around a base and a difficulty regime that guarantee a failing subset per organ. The deterministic mock base fails on part of the set by construction, so the hermetic tests show a reproducible delta with no API key and no network. The same principle holds with a live base. The difficulty band has to be one where the base fails often enough to leave the organ room to work, and the band gets reported with the headline number.
+
+Scoring is the other place a result gets manufactured. A machine has to be able to check the predicate, and the score has to run against the same predicate the organ repairs against. When the score and the repair share one predicate, there's no gap between looks-right and is-right. A separate, softer human-style score reopens that gap and lets an organ take credit for output that doesn't satisfy the constraint. The kit also shows that a scoring choice alone can move a result. A claim that only survives under one of two scorers is a claim about placement rather than reasoning: strict first-line scoring and a leniency-tolerant scorer can disagree by tens of points on the same generations.
+
+Some claims don't survive contact with a base that fails and a predicate that doesn't flatter. Retiring one is uncomfortable. The method depends on it anyway. The retirement gets reported next to the claims that held. A result that has been attacked and still stands is worth more than a result that was never tested, and readers can tell the difference.

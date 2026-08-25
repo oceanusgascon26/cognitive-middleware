@@ -1,0 +1,38 @@
+{
+  "name": "cognitive-middleware",
+  "version": "0.0.1",
+  "description": "Evaluation kit and middleware contract for base-agnostic cognitive organs: components that wrap a base model and add measurable, verifiable value.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "node --test --import tsx \"test/**/*.test.ts\"",
+    "bench:instruction-following": "tsx bench/instruction-following.ts",
+    "bench:durable-learning": "tsx bench/durable-learning.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
