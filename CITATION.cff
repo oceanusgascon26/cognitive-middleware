@@ -6,6 +6,7 @@ authors:
   - family-names: Gascon
     given-names: Chris
 version: 0.0.1
+doi: 10.5281/zenodo.22683481
 date-released: 2026-09-09
 license: MIT
 repository-code: "https://github.com/oceanusgascon26/cognitive-middleware"

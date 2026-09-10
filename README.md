@@ -52,6 +52,10 @@ The experiments this kit supports are reported in the book Project Blue Fairy. T
 
 This kit ships the two organs whose gains survived scrutiny. Three further studies from the same program are deferred to a later release: a self-consistency bench, a retrieval bench, and a contamination control for an associative-reasoning claim that did not survive its own review. The associative-reasoning study depends on a stimulus set with published norms that is not redistributable here, so it will ship with an author-generated substitute. The instruction-following headline comes from a real base with headroom, not from the mock, and is a single exploratory, in-sample run; the durable-learning result is a single-task existence proof on a scripted base. The repo is a way to reproduce both, not independent evidence that either generalizes. The mock exists so the mechanics run anywhere.
 
+## Citing
+
+Release v0.0.1 (code identical to commit 3d20393) is archived at Zenodo: https://doi.org/10.5281/zenodo.22683481. The concept DOI https://doi.org/10.5281/zenodo.22683480 always resolves to the latest release. CITATION.cff carries the citation metadata.
+
 ## License
 
 MIT.
