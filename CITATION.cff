@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this kit, please cite it as below."
+title: "Cognitive Middleware: an evaluation kit and middleware contract for base-agnostic cognitive organs"
+type: software
+authors:
+  - family-names: Gascon
+    given-names: Chris
+version: 0.0.1
+date-released: 2026-09-09
+license: MIT
+repository-code: "https://github.com/oceanusgascon26/cognitive-middleware"
+abstract: "Two organs (a verify-and-repair loop for machine-checkable format constraints and a durable-learning store that carries a lesson across processes) behind one middleware contract, with hermetic tests against a deterministic mock base and a paired-bootstrap bench. The evidence for what the organs do and do not buy is in a separate reviewer archive (https://github.com/oceanusgascon26/blue-fairy-reviewer-archive, DOI 10.17605/OSF.IO/EDUAK)."
+keywords:
+  - large language models
+  - evaluation
+  - instruction following
+  - constraint repair
+  - middleware
