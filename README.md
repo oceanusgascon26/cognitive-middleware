@@ -35,6 +35,10 @@ npm run bench:durable-learning
 
 Run it twice: the store persists to disk, so the second run loads the lesson before it does anything.
 
+## Evidence and the reviewer archive
+
+The experiments this kit supports are reported in the book Project Blue Fairy. Their records, including the frozen plans, every raw model call of the September 2026 controls, the results and the offline audit tools, are in a separate reviewer archive: https://github.com/oceanusgascon26/blue-fairy-reviewer-archive, deposited with the registered report's OSF project at https://osf.io/eduak. The archive pins this repository at commit 3d20393. This note was added after that commit and changes no code.
+
 ## Layout
 
 - `src/base` the base-model interface, a deterministic mock, and adapters for Anthropic and any OpenAI-compatible endpoint.
