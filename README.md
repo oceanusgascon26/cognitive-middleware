@@ -37,7 +37,7 @@ Run it twice: the store persists to disk, so the second run loads the lesson bef
 
 ## Evidence and the reviewer archive
 
-The experiments this kit supports are reported in the book Project Blue Fairy. Their records, including the frozen plans, every raw model call of the September 2026 controls, the results and the offline audit tools, are in a separate reviewer archive: https://github.com/oceanusgascon26/blue-fairy-reviewer-archive, deposited with the registered report's OSF project at https://osf.io/eduak. The archive pins this repository at commit 3d20393. This note was added after that commit and changes no code.
+The experiments this kit supports are reported in the book Project Blue Fairy. Their records, including the frozen plans, every raw model call of the September 2026 controls, the results and the offline audit tools, are in a separate reviewer archive: https://github.com/oceanusgascon26/blue-fairy-reviewer-archive, deposited with the registered report's OSF project at https://osf.io/eduak. The archive pins this repository at commit 3d20393. This note was added after that commit and changes no code. The negative-results paper that reports those controls, Verify-and-Repair Under Matched Call Budgets: Resampling, Grammar Constraints, and Memory Wiring, is a preprint on Zenodo: https://doi.org/10.5281/zenodo.22817239.
 
 ## Layout
 
